@@ -3,7 +3,14 @@ package org.prog;
 public class Main {
 
     public static void main(String[] args) {
-        Car car1 = new Car();
-        car1.goTo("Kyiv");
+        Car myCar = new Car();
+        Car thatCar = new Car();
+
+        myCar.equals(thatCar);
+
+        myCar.color = "red";
+        thatCar.color = "blue";
+
+        System.out.println("this will neve run");
     }
 }

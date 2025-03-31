@@ -2,18 +2,27 @@ package org.prog;
 
 import org.prog.poly.ICar;
 
-/**
- * CAR > PICKUP > CARGO_TRUCK > BIG_TRUCK > VERY_BIG_TRUCK
- * ICAR ......................> OVERRIDE > ............
- */
-
-
+//TODO: add owner to equals emthod and hascode method
 public class Car implements ICar {
 
     public Integer fuelLevel;
     public Engine engine;
     public String color;
     public int milage;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Car) {
+            Car c = (Car) obj;
+            return this.color.equals(c.color);
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.color.hashCode();
+    }
 
     public void goTo(String destination) {
         goTo(destination, "nowhere");
