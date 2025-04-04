@@ -1,34 +1,53 @@
 package org.prog.exceptions;
 
-import org.prog.Car;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class ExceptionsDemo {
 
     public static void main(String[] args) throws MalformedURLException {
-        Car car = new Car();
-        Car car2 = new Car();
-        car.equals(car2);
-
         smth1("this is bad url");
-        System.out.println("this will never run");
+        System.out.println("================================");
+        smth1(null);
+        System.out.println("================================");
+        smth1("https://www.google.com/");
+        System.out.println("================================");
+        System.out.println("this will now run");
     }
 
     public static void smth1(String s) throws MalformedURLException {
-        smth2(s);
+        try {
+            smth2(s);
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static void smth2(String s) throws MalformedURLException {
-        smth3(s);
+        try {
+            smth3(s);
+        } catch (MalformedURLException me) {
+            System.out.println("Malformed URL: " + s);
+        } catch (MyEx me) {
+        } finally {
+
+        }
     }
 
-    public static void smth3(String s) throws MalformedURLException {
+    public static void smth3(String s) throws MalformedURLException, MyEx {
+        if (s == null) {
+            throw new MyEx();
+        }
+        System.out.println(s.equals("https://www.google.com/"));
         smth4(s);
     }
 
     public static void smth4(String s) throws MalformedURLException {
-        URL url = new URL(s);
+        try {
+            URL url = new URL(s);
+            System.out.println("Will not print on error");
+        } finally {
+            System.out.println("Will always print if got to smth4");
+        }
     }
 }

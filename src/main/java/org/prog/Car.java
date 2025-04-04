@@ -2,6 +2,9 @@ package org.prog;
 
 import org.prog.poly.ICar;
 
+import java.util.HashSet;
+import java.util.Set;
+
 //TODO: add owner to equals emthod and hascode method
 public class Car implements ICar {
 
@@ -9,6 +12,8 @@ public class Car implements ICar {
     public Engine engine;
     public String color;
     public int milage;
+
+//    public Set<String> drivers = new HashSet<>();
 
     @Override
     public boolean equals(Object obj) {
