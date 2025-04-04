@@ -13,18 +13,20 @@ public class Main {
         car1.color = "red";
         car2.color = "blue";
         car3.color = "green";
-
+car1.carOwner("Scott");
+car2.carOwner("Jack");
+car3.carOwner("George");
         car1.milage = 10;
 
-        carRentService.rantThatDoesntWork(car1.milage, 20000);
-        System.out.println("car1 milage " + car1.milage);
+ //       carRentService.rantThatDoesntWork(car1.milage, 20000);
+ //       System.out.println("car1 milage " + car1.milage);
 
-        carRentService.rentCar(car1, 200);
-        System.out.println("car1 milage " + car1.milage);
+  //      carRentService.rentCar(car1, 200);
+ //       System.out.println("car1 milage " + car1.milage);
 
-//        car1.goTo("Kyiv");
-//        car2.goTo("Odessa");
-//        car3.goTo("Warsaw");
+        car1.goTo("Kyiv");
+        car2.goTo("Odessa");
+            car3.goTo("Warsaw");
 //
 //        carService.paintCar(car1, "yellow");
 //        carService.paintCar(car2, "purple");
