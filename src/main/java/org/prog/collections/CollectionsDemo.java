@@ -1,9 +1,9 @@
 package org.prog.collections;
 
-import io.cucumber.java.it.Ma;
 import org.prog.Car;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 //TODO: Write collection where unique drivers own multiple cars
 //TODO: fill owners and cars
@@ -14,35 +14,29 @@ import java.util.*;
 public class CollectionsDemo {
 
     public static void main(String[] args) {
-        Car car1 = new Car();
-        Car car2 = new Car();
-        Car car3 = new Car();
+        List<Car> cars = new ArrayList<>();
+        cars.add(new Car("red"));
+        cars.add(new Car("blue"));
+        cars.add(new Car("red"));
+        cars.add(new Car("green"));
+        cars.add(new Car("red"));
+        cars.add(new Car("yellow"));
 
-        car1.color = "red";
-        car2.color = "blue";
-        car3.color = "green";
+//        String result = "";
+//
+//        for (Car c : cars) {
+//            if (c.color.equals("red") || c.color.equals("yellow")) {
+//                result += car.color + ",";
+//            }
+//        }
+//        System.out.println(result);
 
-        Map<Car, String> carsWithDrivers = new HashMap<>();
-        carsWithDrivers.put(car1, "John");
-        carsWithDrivers.put(car2, "Jane");
-        carsWithDrivers.put(car3, "Jack");
+        String result = cars.stream()
+                .filter(c -> c.color.equals("red") || c.color.equals("yellow"))
+                .map(c -> c.color)
+                .collect(Collectors.joining(","));
 
-        System.out.println(carsWithDrivers.get(car1));
-
-        Map<Car, Set<String>> carsWithDrivers2 = new HashMap<>();
-        carsWithDrivers2.put(car1, new HashSet<>());
-        carsWithDrivers2.put(car2, new HashSet<>());
-        carsWithDrivers2.put(car3, new HashSet<>());
-
-        carsWithDrivers2.get(car1).add("John");
-        carsWithDrivers2.get(car1).add("Jane");
-
-        carsWithDrivers2.get(car2).add("Jack");
-        carsWithDrivers2.get(car2).add("Jane");
-
-        carsWithDrivers2.get(car3).add("Jack");
-        carsWithDrivers2.get(car3).add("John");
-
+        System.out.println(result);
 
     }
 

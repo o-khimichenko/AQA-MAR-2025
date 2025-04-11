@@ -15,6 +15,12 @@ public class Car implements ICar {
 
 //    public Set<String> drivers = new HashSet<>();
 
+    public Car(){}
+
+    public Car(String color){
+        this.color = color;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Car) {
@@ -67,4 +73,5 @@ public class Car implements ICar {
     public void turnRight() {
         System.out.println("Car turns right");
     }
+
 }
