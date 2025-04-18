@@ -2,6 +2,9 @@ package org.prog;
 
 public class Engine {
 
-    public String volume;
-    public String fuelType;
+    public long timestamp;
+
+    public Engine() {
+        timestamp = System.currentTimeMillis();
+    }
 }
