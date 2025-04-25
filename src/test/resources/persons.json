@@ -1,0 +1,27 @@
+{
+  "results": [{
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Sebastian",
+        "last": "Bremer"
+      },
+      "nat": "DE"
+    }, {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Mahdi",
+        "last": "Saga"
+      },
+      "nat": "NO"
+    }, {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Giray",
+        "last": "Koç"
+      },
+      "nat": "TR"
+    }]
+}
