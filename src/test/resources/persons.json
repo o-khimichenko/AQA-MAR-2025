@@ -1,5 +1,6 @@
 {
-  "results": [{
+  "results": [
+    {
       "gender": "male",
       "name": {
         "title": "Mr",
@@ -7,7 +8,8 @@
         "last": "Bremer"
       },
       "nat": "DE"
-    }, {
+    },
+    {
       "gender": "male",
       "name": {
         "title": "Mr",
@@ -15,7 +17,8 @@
         "last": "Saga"
       },
       "nat": "NO"
-    }, {
+    },
+    {
       "gender": "male",
       "name": {
         "title": "Mr",
@@ -23,5 +26,6 @@
         "last": "Koç"
       },
       "nat": "TR"
-    }]
+    }
+  ]
 }
