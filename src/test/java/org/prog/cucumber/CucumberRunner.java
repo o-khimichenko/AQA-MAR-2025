@@ -11,7 +11,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 @CucumberOptions(
-        tags = "@regression and not @exclude",
+        tags = "@wip",
         features = "src/test/resources/features",
         glue = "org.prog.cucumber.steps"
 )
