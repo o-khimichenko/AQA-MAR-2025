@@ -7,8 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.prog.cucumber.steps.WebSteps;
 import org.prog.page.CloudFlarePage;
 import org.prog.page.GooglePage;
+import org.prog.util.WebDriverFactory;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import java.net.MalformedURLException;
 
 @CucumberOptions(
         tags = "@wip",
@@ -20,8 +23,9 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     private WebDriver driver;
 
     @BeforeSuite
-    public void beforeSuite() {
-        driver = new ChromeDriver();
+    public void beforeSuite() throws MalformedURLException {
+        String driverType = System.getProperty("driver.type", "jenkins");
+        driver = WebDriverFactory.getDriver(driverType);
         WebSteps.googlePage = new GooglePage(driver);
         WebSteps.cloudFlarePage = new CloudFlarePage(driver);
     }
