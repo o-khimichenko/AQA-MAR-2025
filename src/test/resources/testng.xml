@@ -2,13 +2,7 @@
 <suite name="Suite1" verbose="1">
     <test name="My first Test">
         <classes>
-            <class name="org.prog.testng.MyFirstTest"/>
-        </classes>
-    </test>
-    <test name="My second Test">
-        <classes>
-            <class name="org.prog.testng.MySecondTest"/>
-            <class name="org.prog.testng.MyThirdTest"/>
+            <class name="org.prog.cucumber.CucumberRunner"/>
         </classes>
     </test>
 </suite>
