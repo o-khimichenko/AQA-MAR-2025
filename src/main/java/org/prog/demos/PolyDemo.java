@@ -3,10 +3,7 @@ package org.prog.demos;
 import org.prog.Car;
 import org.prog.inheritance.BigCargoTruck;
 import org.prog.inheritance.VeryBigCargoTruck;
-import org.prog.poly.BMW;
-import org.prog.poly.Ford;
-import org.prog.poly.ICar;
-import org.prog.poly.Mazda;
+import org.prog.poly.*;
 
 public class PolyDemo {
 
@@ -18,6 +15,14 @@ public class PolyDemo {
         Ford ford = new Ford();
         Mazda mazda = new Mazda();
 
+Bus bus = new Bus();
+Boat boat = new Boat();
+Train train = new Train();
+bus.addPassengers();
+bus.addPassengers();
+boat.removePassengers();
+train.removePassengers();
+train.removePassengers();
         driveSomewhere(bmw);
         driveSomewhere(ford);
         driveSomewhere(mazda);
@@ -32,4 +37,5 @@ public class PolyDemo {
         iCar.turnRight();
         iCar.turnRight();
     }
+
 }
