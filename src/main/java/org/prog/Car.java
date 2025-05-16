@@ -9,7 +9,16 @@ public class Car implements ICar {
     public Engine engine;
     public String color;
     public int milage;
+public String owner;
 
+
+public boolean equalsO(Object obj){
+        if (obj instanceof Car){
+            Car cOwn = (Car) obj;
+            return this.owner.equals(cOwn.owner);
+        }
+        return false;
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Car) {
@@ -18,7 +27,9 @@ public class Car implements ICar {
         }
         return false;
     }
-
+public int ownerHash(){
+        return this.owner.hashCode();
+}
     @Override
     public int hashCode() {
         return this.color.hashCode();

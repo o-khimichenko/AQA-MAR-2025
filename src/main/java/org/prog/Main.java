@@ -6,11 +6,13 @@ public class Main {
         Car myCar = new Car();
         Car thatCar = new Car();
 
-        myCar.equals(thatCar);
 
+        myCar.owner = "George";
+        thatCar.owner = "George";
         myCar.color = "red";
-        thatCar.color = "blue";
+        thatCar.color = "red";
 
-        System.out.println("this will neve run");
+        System.out.println(myCar.equalsO(thatCar));
+      ///  System.out.println("this will neve run");
     }
 }
