@@ -20,10 +20,10 @@ import java.sql.SQLException;
         tags = "@wip",
         features = "src/test/resources/features",
         glue = "org.prog.cucumber.steps",
-        plugin = {
-                "pretty",
+        plugin = {"pretty",
                 "json:target/cucumber-reports/Cucumber.json",
-                "html:target/cucumber-report.html"
+                "html:target/cucumber-report.html",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         }
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
