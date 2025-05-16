@@ -12,7 +12,7 @@ public class Car implements ICar {
 public String owner;
 
 
-public boolean equalsO(Object obj){
+public boolean equalsOwner(Object obj){
         if (obj instanceof Car){
             Car cOwn = (Car) obj;
             return this.owner.equals(cOwn.owner);
@@ -27,8 +27,9 @@ public boolean equalsO(Object obj){
         }
         return false;
     }
+
 public int ownerHash(){
-        return this.owner.hashCode();
+    return this.owner.hashCode();
 }
     @Override
     public int hashCode() {
@@ -73,4 +74,6 @@ public int ownerHash(){
     public void turnRight() {
         System.out.println("Car turns right");
     }
+
+
 }

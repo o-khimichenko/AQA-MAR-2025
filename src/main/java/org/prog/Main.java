@@ -7,12 +7,15 @@ public class Main {
         Car thatCar = new Car();
 
 
-        myCar.owner = "George";
+        myCar.owner = "Paul";
         thatCar.owner = "George";
         myCar.color = "red";
         thatCar.color = "red";
 
-        System.out.println(myCar.equalsO(thatCar));
-      ///  System.out.println("this will neve run");
+      //  System.out.println(myCar.equals(thatCar));
+        System.out.println(myCar.equalsOwner(thatCar));
+        System.out.println(myCar.ownerHash());
+        System.out.println(thatCar.ownerHash());
+      //  System.out.println("this will neve run");
     }
 }
