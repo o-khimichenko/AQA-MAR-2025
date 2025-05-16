@@ -3,6 +3,7 @@ package org.prog.cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.WebDriver;
+import org.prog.cucumber.steps.SQLSteps;
 import org.prog.cucumber.steps.WebSteps;
 import org.prog.page.CloudFlarePage;
 import org.prog.page.GooglePage;
@@ -37,6 +38,8 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
 
         driver = WebDriverFactory.getDriver(driverType);
         connection = DriverManager.getConnection(sqlHost, "root", "password");
+
+        SQLSteps.connection = connection;
         WebSteps.googlePage = new GooglePage(driver);
         WebSteps.cloudFlarePage = new CloudFlarePage(driver);
     }
