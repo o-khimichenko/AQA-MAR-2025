@@ -15,7 +15,6 @@ public class SQLSteps {
 
     @Given("I pick random person from DB")
     public void iPickRandomPersonFromDB() throws SQLException {
-        Connection connection = null;
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT * FROM Persons ORDER BY RAND() LIMIT 1");
         if (resultSet.next()) {
@@ -28,7 +27,6 @@ public class SQLSteps {
 
     @Given("I pick random person from DB as {string}")
     public void iPickRandomPersonFromDB(String alias) throws SQLException {
-        Connection connection = null;
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT * FROM Persons ORDER BY RAND() LIMIT 1");
         if (resultSet.next()) {
