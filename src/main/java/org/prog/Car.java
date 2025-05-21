@@ -12,9 +12,12 @@ public class Car implements ICar {
     public Engine engine;
     public String color;
     public int milage;
+public String carDriver;
+    public Set<String> drivers = new HashSet<>();
 
-//    public Set<String> drivers = new HashSet<>();
-
+    public int driverHash(){
+        return this.carDriver.hashCode();
+    }
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof Car) {
