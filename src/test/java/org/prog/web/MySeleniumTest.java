@@ -35,9 +35,4 @@ public class MySeleniumTest {
         searchInput.sendKeys(Keys.ENTER);
         System.out.println("We found ben!");
     }
-
-    @AfterSuite
-    public void tearDown() {
-        driver.quit();
-    }
 }
