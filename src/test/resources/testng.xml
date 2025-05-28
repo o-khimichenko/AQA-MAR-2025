@@ -11,4 +11,9 @@
             <class name="org.prog.MyThirdTest"/>
         </classes>
     </test>
+    <test name="WhiteCars Test">
+        <classes>
+                <class name="org.prog.WhiteCarsTest"/>
+        </classes>
+    </test>
 </suite>
