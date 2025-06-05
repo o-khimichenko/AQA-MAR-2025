@@ -44,7 +44,7 @@ public class OnlineSearchTest {
         String price = priceElement.getText();
 
         System.out.println("Product title: " + title);
-        System.out.println("Price: " + price);
+        System.out.println("Price of the product: " + price);
     }
 
     @AfterSuite
